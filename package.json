@@ -1,0 +1,20 @@
+{
+  "name": "UniCom_United_Community_Backend",
+  "version": "1.0.0",
+  "description": "<p align=\"center\">\r   <a href=\"\" rel=\"noopener\">\r  <img src=\"https://media-fastly.hackerearth.com/media/hackathon/code19-india/images/cdaa23867a-MITLI_Coverimage.jpg\" alt=\"Project logo\"></a>\r </p>\r <h3 align=\"center\">UniCom : United Community Backend</h3>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webobite/UniCom_United-Community_Backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/webobite/UniCom_United-Community_Backend/issues"
+  },
+  "homepage": "https://github.com/webobite/UniCom_United-Community_Backend#readme"
+}
