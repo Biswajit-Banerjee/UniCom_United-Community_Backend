@@ -109,3 +109,8 @@ tmp/
 temp/
 
 # End of https://www.gitignore.io/api/node
+package-lock.json
+user_document_Structure.json
+helper_document_Structure.json
+config/dev.js
+config/testing.js
