@@ -20,7 +20,7 @@ route.get("/helper/resource/:user_id", middleware.checkToken,(req, res) => {
     .then(data => {
         if(data.length == 0) {
             res.send({
-              sucess: false,
+              sucess: true,
               payload: null,
             });
         } 
