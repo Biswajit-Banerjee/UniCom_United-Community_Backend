@@ -5,15 +5,9 @@ const uniqueValidator = require("mongoose-unique-validator");
 
 const userSchema = new Schema(
   {
-    google_profile_id: {
-      type: String,
-      unique: true,
-      // required: true,
-    },
     google_userName: {
       type: String,
       unique: true,
-      required: true,
     },
     google_emailId: {
       type: String,
@@ -66,8 +60,9 @@ const userSchema = new Schema(
       contact_details: {
         phone_number: Number,
         mobile_number: Number,
-      }
+      },
     },
+    isUserLoggedIn : Boolean
   },
   {
     collection: "Userdb",
