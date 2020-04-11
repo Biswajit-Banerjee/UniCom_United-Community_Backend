@@ -114,3 +114,5 @@ user_document_Structure.json
 helper_document_Structure.json
 config/dev.js
 config/testing.js
+data_source/data_insert.js
+data_source/processed_hotel_data_cw.json
