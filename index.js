@@ -35,7 +35,8 @@ app.use("/api", [testRoute, authUser, resourceManager, postManager]);
 try {
   app.listen(config.port, () => {
     if (config.env === "production")
-      console.log(`UniCom Backend on https://mydomain.in/:${config.port}`);
+      console.log(`UniCom Backend on https://uni-com-backend.herokuapp.com:${config.port}`
+      );
     else console.log(`UniCom Backend on http://localhost:${config.port}`);
   });
 } catch (e) {
