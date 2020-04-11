@@ -1,6 +1,34 @@
 const route = require("express").Router();
 const UserSchema = require("../models/users.model");
 
+
+route.get("/mypost/:_id", (req, res) => {
+    UserSchema.find({
+        _id : req.params._id
+    }, [
+        "_id",
+        "post_list"
+    ])
+    .then(data => {
+        if(data.length == 0) {
+            res.send({
+                success : true,
+                payload : null
+            });
+        }
+        res.send({
+            success : true,
+            payload : data
+        });
+    })
+    .catch(err => {
+        res.send({
+            error : err,
+            success : false
+        })
+    })
+})
+
 // Add new post 
 route.post("/add/post/:_id", (req, res) => {
   let post_name = req.body.post_name;
