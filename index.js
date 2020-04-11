@@ -36,7 +36,7 @@ try {
   app.listen(process.env.PORT || config.port, () => {
     if (config.env === "production")
       console.log(
-        `UniCom Backend on https://uni-com-backend.herokuapp.com:${config.port}`
+        `UniCom Backend on https://uni-com-backend.herokuapp.com:${process.env.PORT}`
       );
     else console.log(`UniCom Backend on http://localhost:${config.port}`);
   });
