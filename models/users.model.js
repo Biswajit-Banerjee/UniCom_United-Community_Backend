@@ -1,7 +1,21 @@
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
 const uniqueValidator = require("mongoose-unique-validator");
-
+const post_info = {
+  post_name: {
+    type: String,
+    required: true,
+  },
+  post_desc: {
+    type: String,
+  },
+  place_tag: {
+    type: String,
+  },
+  created_at: {
+    type: Date,
+  },
+};
 
 const userSchema = new Schema(
   {
@@ -62,7 +76,11 @@ const userSchema = new Schema(
         mobile_number: Number,
       },
     },
-    isUserLoggedIn : Boolean
+    isUserLoggedIn: Boolean,
+    post_list: {
+      type: [post_info],
+      default: [],
+    },
   },
   {
     collection: "Userdb",
@@ -71,6 +89,4 @@ const userSchema = new Schema(
 
 userSchema.plugin(uniqueValidator);
 
-module.exports = mongoose.model(
-    "users", userSchema
-);
+module.exports = mongoose.model("users", userSchema);
